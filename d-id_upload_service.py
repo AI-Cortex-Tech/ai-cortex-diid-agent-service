@@ -64,4 +64,4 @@ def upload_to_did():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5100) 
+  app.run(host='0.0.0.0', port=5100, ssl_context=('cert.pem', 'key.pem'))
